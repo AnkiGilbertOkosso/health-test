@@ -10,7 +10,7 @@
     <!-- Sidebar -->
     <div
         id="sidebar"
-        class="flex flex-col absolute z-40 lg:rounded-r-2xl left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-slate-800 p-4 transition-all duration-200 ease-in-out"
+        class="flex flex-col absolute z-40 lg:rounded-r-2xl left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-[#4B0082] p-4 transition-all duration-200 ease-in-out"
         :class="sidebarOpen ? 'translate-x-0' : '-translate-x-64'"
         @click.outside="sidebarOpen = false"
         @keydown.escape.window="sidebarOpen = false"
@@ -28,7 +28,7 @@
             </button>
             <!-- Logo -->
             <a class="flex items-center" href="{{ route('dashboard') }}">
-                <img src="{{ asset('/images/logo.png') }}" class="w-8 h-auto" alt=""><span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Wellbeacon™</span>
+                <img src="{{ asset('/images/logo.png') }}" class="w-8 h-auto" alt=""><span class="self-center text-xl font-semibold whitespace-nowrap text-white ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">Wellbeacon™</span>
 
             </a>
         </div>

@@ -48,7 +48,7 @@
             <div class="container flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/" class="flex items-center">
                     <img src="{{ asset('/images/logo.png') }}" class="h-6 mr-2 sm:h-9" alt="Wellbeacon Logo" />
-                    <span class="self-center text-xl font-black whitespace-nowrap dark:text-white">Wellbeacon</span>
+                    <span class="self-center text-xl font-black whitespace-nowrap dark:text-white">Wellbeacon™</span>
                 </a>
                 <div class="flex items-center space-x-2 lg:order-2">
                     <a href="{{ route('register') }}"

@@ -26,6 +26,9 @@ use App\Http\Controllers\DiaryController;
 Route::get('/', function () {
     return view('pages/web/home');
 });
+Route::get('/contact', function () {
+    return view('pages/web/contact');
+});
 // Route::redirect('/', 'login');
 
 Route::middleware(['auth'])->group(function () {

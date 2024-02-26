@@ -62,7 +62,8 @@
                 </div>
             </div>
 
-            <form action="https://fabform.io/f/xxxxx" method="post" class="ml-auo space-y-4">
+            <form action="{{ route('contact.submit') }}" method="POST" class="ml-auo space-y-4">
+                @csrf
                 <input type='text' name ="name" placeholder='Name'
                     class="w-full rounded-md py-2.5 px-4 border text-sm outline-purple-600" />
                 <input type='email' name='email' placeholder='Email'
@@ -71,7 +72,7 @@
                     class="w-full rounded-md py-2.5 px-4 border text-sm outline-purple-600" />
                 <textarea placeholder='Message' rows="6" name='message'
                     class="w-full rounded-md px-4 border text-sm pt-2.5 outline-purple-600"></textarea>
-                <button type='button' type="submit"
+                <button type="submit"
                     class="text-white bg-gradient-to-r from-purple-700 to-purple-800 hover:to-purple-900 font-semibold rounded-md text-sm px-4 py-2.5 w-full">Send</button>
             </form>
         </div>

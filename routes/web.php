@@ -1,15 +1,9 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataFeedController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\OrderController;
-use App\Http\Controllers\InvoiceController;
-use App\Http\Controllers\MemberController;
-use App\Http\Controllers\TransactionController;
-use App\Http\Controllers\JobController;
-use App\Http\Controllers\CampaignController;
 use App\Http\Controllers\DiaryController;
         use App\Http\Controllers\MealController;
 
@@ -25,16 +19,15 @@ use App\Http\Controllers\DiaryController;
 */
 Route::get('/', function () {
     return view('pages/web/home');
-});
-Route::get('/contact', function () {
-    return view('pages/web/contact');
-});
+})->name('home');
+Route::get('/contact', [ContactController::class, 'showForm'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'submitForm'])->name('contact.submit');
 // Route::redirect('/', 'login');
 
-Route::middleware(['auth'])->group(function () {
-    Route::resource('diaries', DiaryController::class);
-    Route::resource('diaries.meals', MealController::class);
-});
+// Route::middleware(['auth'])->group(function () {
+//     Route::resource('diaries', DiaryController::class);
+//     Route::resource('diaries.meals', MealController::class);
+// });
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 

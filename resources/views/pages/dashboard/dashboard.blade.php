@@ -8,7 +8,8 @@
         <div class="sm:flex sm:justify-between sm:items-center mb-8">
 
             <!-- Left: Avatars -->
-            <x-dashboard.dashboard-avatars />
+            {{-- <x-dashboard.dashboard-avatars /> --}}
+            <h1 class="text-4xl font-black text-gray-950 mb-2">Summary</h1>
 
             <!-- Right: Actions -->
             <div class="grid grid-flow-col sm:auto-cols-max justify-start sm:justify-end gap-2">
@@ -34,7 +35,12 @@
         <!-- Cards -->
         <div class="grid grid-cols-12 gap-6">
 
-            <!-- Line chart (Acme Plus) -->
+            <div class="col-span-full text-center bg-white dark:bg-slate-800 shadow-lg py-24 rounded-sm border border-slate-200 dark:border-slate-700">No activity yet</div>
+
+            <!-- Medication -->
+            <x-dashboard.dashboard-card-00 />
+            
+            {{-- <!-- Line chart (Acme Plus) -->
             <x-dashboard.dashboard-card-01 :dataFeed="$dataFeed" />
 
             <!-- Line chart (Acme Advanced) -->
@@ -71,7 +77,7 @@
             <x-dashboard.dashboard-card-12 />
             
             <!-- Card (Income/Expenses) -->
-            <x-dashboard.dashboard-card-13 />   
+            <x-dashboard.dashboard-card-13 />    --}}
 
         </div>
 

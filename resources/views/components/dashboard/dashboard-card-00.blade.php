@@ -30,44 +30,4 @@
     </div>
     <div class="grow">
     </div>
-    <!-- Medication Modal -->
-    <div x-show="openModal" @keydown.escape.window="openModal = false" class="fixed inset-0 overflow-y-auto z-50"
-        x-cloak>
-        <div class="flex items-center justify-center min-h-screen px-4">
-            <div class="fixed inset-0 transition-opacity" aria-hidden="true" x-show="openModal"
-                x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0"
-                x-transition:enter-end="opacity-100" x-transition:leave="ease-in duration-200"
-                x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0">
-                <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
-            </div>
-
-            <!-- Modal -->
-            <div class="bg-white rounded-lg shadow-xl transform transition-all max-w-lg w-full p-6" role="dialog"
-                aria-modal="true" aria-labelledby="modal-headline" x-show="openModal" @click.away="openModal = false"
-                x-transition:enter="ease-out duration-300" x-transition:enter-start="opacity-0 translate-y-4"
-                x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="ease-in duration-200"
-                x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4">
-                <h3 class="text-lg font-semibold mb-4">Add Medication</h3>
-                <!-- Medication Form -->
-                <form>
-                    <!-- Medication Name Field -->
-                    <div class="mb-4">
-                        <label for="medication_name" class="block text-sm font-medium text-gray-700">Medication
-                            Name</label>
-                        <input type="text" id="medication_name" name="medication_name"
-                            class="mt-1 p-2 block w-full rounded-md border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                    </div>
-                    <!-- Other Parameters Related to Medication -->
-                    <!-- Add more fields as needed -->
-
-                    <!-- Submit Button -->
-                    <div class="flex justify-end">
-                        <button type="submit"
-                            class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">Add
-                            Medication</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
 </div>

@@ -1,11 +1,13 @@
 <?php
-
+use App\Http\Controllers\CalorieController;
 use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataFeedController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DiaryController;
-        use App\Http\Controllers\MealController;
+use App\Http\Controllers\ExerciseController;
+use App\Http\Controllers\FoodIntakeController;
+use App\Http\Controllers\MealController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +39,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::fallback(function() {
         return view('pages/utility/404');
-    });    
+    });
+
+    Route::post('/calorie/goal', [CalorieController::class, 'create'])->name('calorie.goal');
+    Route::get('/net-calories', [CalorieController::class, 'calculateNetCalories'])->name('net.calories');
+    Route::get('/food-intake', [FoodIntakeController::class, '__invoke'])->name('food-intake');
+    Route::get('/exercise1', [ExerciseController::class, 'create'])->name('exercise');
+    Route::get('/exercise', [ExerciseController::class, 'fetchInsert'])->name('exercise');
+
 });

@@ -37,6 +37,8 @@
 
             <div class="col-span-full text-center bg-white dark:bg-slate-800 shadow-lg py-24 rounded-sm border border-slate-200 dark:border-slate-700">No activity yet</div>
 
+            <!-- Doughnut chart (Top Countries) -->
+            <x-dashboard.dashboard-card-06 />
             <!-- Medication -->
             <x-dashboard.dashboard-card-00 />
             
@@ -55,8 +57,7 @@
             <!-- Line chart (Real Time Value) -->
             <x-dashboard.dashboard-card-05 />
 
-            <!-- Doughnut chart (Top Countries) -->
-            <x-dashboard.dashboard-card-06 />
+            
 
             <!-- Table (Top Channels) -->
             <x-dashboard.dashboard-card-07 />
